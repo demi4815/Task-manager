@@ -1,4 +1,4 @@
-package ua.edu.sumdu.ta.Karina.pr2;
+package ua.edu.sumdu.ta.Karina.pr3;
 
 public class Main {
 

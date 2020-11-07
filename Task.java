@@ -1,4 +1,4 @@
-package ua.edu.sumdu.ta.Karina.pr2;
+package ua.edu.sumdu.ta.Karina.pr3;
 
 /**
  * The first part of this project will be creating a class that describes the "task" data type, which
@@ -36,8 +36,7 @@ public class Task
      */
     public boolean isActive()
     {
-        if (active) return true;
-        else return false;
+        return active;
     }
 
     /**
@@ -127,8 +126,7 @@ public class Task
      */
     public boolean isRepeated()
     {
-        if (start != end) return true;
-        else return false;
+        return start != end;
     }
 
     /**
@@ -172,7 +170,7 @@ public class Task
                     int next = start + repeat;
                     while (next <= end - repeat)
                     {
-                        if (time >= prev & time < next)
+                        if (time < next)
                         {
                             nt = next;
                             break;
@@ -199,8 +197,7 @@ public class Task
      */
     public boolean check(int time)
     {
-        if (time < 0) return false;
-        else return true;
+        return time < 0;
     }
 
     /**
@@ -212,8 +209,7 @@ public class Task
      */
     public boolean check(int start, int end, int repeat)
     {
-        if (start > end | start < 0 | end < 0 | repeat < 0) return false;
-        else return true;
+        return start <= end && start >= 0 && end >= 0 && repeat >= 0;
     }
 
     /**
@@ -224,7 +220,7 @@ public class Task
      */
     public Task(String title, int time)
     {
-        if (check(time))
+        if (!check(time))
         {
             setTitle(title);
             setTime(time);
@@ -252,7 +248,7 @@ public class Task
         else System.out.print("Incorrect data");
     }
 
-    private String title;
+    public String title;
     private int time, start, end, repeat;
     private boolean active;
 }

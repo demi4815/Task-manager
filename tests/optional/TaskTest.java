@@ -1,6 +1,6 @@
-package ua.edu.sumdu.ta.Karina.pr2.tests.optional;
+package ua.edu.sumdu.ta.Karina.pr3.tests.optional;
 
-import ua.edu.sumdu.ta.Karina.pr2.*;
+import ua.edu.sumdu.ta.Karina.pr3.*;
 
 import org.junit.*;
 import static org.junit.Assert.*;
